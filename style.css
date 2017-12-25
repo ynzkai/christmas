@@ -13,7 +13,6 @@ body,
 
 .container {
     background-color: #290707;
-    padding-top: 100px;
     color: #fff;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -23,7 +22,8 @@ body,
     position: relative;
     width: 50%;
     height: 50%;
-    margin: 0 auto;
+	top: 50%;
+    margin: -220px auto;
     transform-origin: 50% 0;
     transform: rotate(25deg);
     z-index: 999;
