@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    background-color: #290707;
+    padding-top: 100px;
+    color: #fff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#tree {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    transform-origin: 50% 0;
+    transform: rotate(25deg);
+    z-index: 999;
+}
+
+.leaf1,
+.leaf2 {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50px;
+    height: 300px;
+    background-color: #1d7422;
+    box-shadow: 0 10px 10px #180404;
+    opacity: 0.5;
+}
+
+.leaf1::after,
+.leaf2::after {
+    content: '*';
+    display: block;
+    width: 1em;
+    height: 1em;
+    font-size: 1.5em;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+}
+
+.leaf2 {
+    box-shadow: 0 2px 2px #070303;
+    height: 250px;
+}
+
+.top-star {
+    text-align: center;
+    font-size: 5em;
+    color: #ffee02;
+    position: relative;
+    top: -.9em;
+    left: 0.2em;
+    z-index: 999;
+}
+
+.top-star span {
+    /*
+    animation: top-star-bling 3s ease 0s infinite alternate;
+    */
+    text-shadow: 0 0 200px #ffee02;
+}
+
+@keyframes top-star-bling {
+    0% {
+        text-shadow: 0 0 10px #ffee02;
+    }
+    100% {
+        text-shadow: 0 0 100px #ffee02;
+    }
+}
+
+.trunk {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50px;
+    height: 400px;
+    transform-origin: 50% 0;
+    transform: rotate(-25deg);
+    z-index: -1;
+    background: linear-gradient(to right, #5c3708 0%, #7a480b 50%, #5c3708 100%);
+}
+
+.little-star,
+.mid-star,
+.big-snow,
+.big-star {
+    position: absolute;
+}
+
+.little-star {
+    width: .2em;
+    height: .2em;
+    background: rgb(126, 124, 34);
+    animation: bling 2s ease 2s infinite alternate;
+}
+
+.mid-star {
+    width: .5em;
+    height: .5em;
+    color: rgb(197, 129, 27);
+    animation: bling 4s ease 1s infinite alternate;
+}
+
+.big-snow,
+.big-star {
+    width: 1em;
+    height: 1em;
+    color: red;
+    font-size: 2em;
+    animation: bling 5s ease 0s infinite alternate;
+}
+
+.big-snow {
+    color: white;
+}
+
+@keyframes bling {
+    0% {opacity: 0.3;}
+    30% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+.message,
+.merry {
+    position: absolute;
+    bottom: 3em;
+    width: 100%;
+    text-align: center;
+    font-size: 3em;
+    z-index: 900000;
+}
+
+.message {
+    bottom: 1em;
+}
